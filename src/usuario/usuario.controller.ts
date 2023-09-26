@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Get } from "@nestjs/common";
 import { UsuarioRepository } from './usuario.repository';
-import { CriaUsuarioDto } from "./dto/CriaUsuario.dto";
+import { CriaUsuarioDto } from "./dto/criaUsuario.dto";
 
 @Controller('/usuarios')
 export class UsuarioController {

@@ -1,4 +1,4 @@
 export class CaracteristicaProdutoDTO {
-    nome: string;
-    descricao: string;
-  }
+  nome: string;
+  descricao: string;
+}

@@ -1,4 +1,11 @@
+import { IsNotEmpty, IsString, IsUrl } from "class-validator";
+
 export class ImagemProdutoDTO {
-    url: string;
-    descricao: string;
-  }
+
+  @IsUrl(undefined, { message: 'URL para imagem inválida' })
+  url: string;
+
+  @IsString()
+  @IsNotEmpty({ message: 'Descrição da imagem não pode ser vazia' })
+  descricao: string;
+}

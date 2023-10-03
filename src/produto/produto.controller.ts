@@ -18,13 +18,13 @@ export class ProdutoController {
         produtoEntity.usuarioId = dadosDoProduto.usuarioId;
         produtoEntity.nome = dadosDoProduto.nome;
         produtoEntity.valor = dadosDoProduto.valor;
-        produtoEntity.quantidadeDisponivel = dadosDoProduto.quantidadeDisponivel;
+        produtoEntity.quantidade = dadosDoProduto.quantidade;
         produtoEntity.descricao = dadosDoProduto.descricao;
-        produtoEntity.caracteristicas = dadosDoProduto.caracteristicas;
-        produtoEntity.imagens = dadosDoProduto.imagens;
         produtoEntity.categoria = dadosDoProduto.categoria;
-        produtoEntity.dataCriacao = dadosDoProduto.dataCriacao;
-        produtoEntity.dataAtualizacao = dadosDoProduto.dataAtualizacao;
+        // produtoEntity.caracteristicas = dadosDoProduto.caracteristicas;
+        // produtoEntity.imagens = dadosDoProduto.imagens;
+        // produtoEntity.dataCriacao = dadosDoProduto.dataCriacao;
+        // produtoEntity.dataAtualizacao = dadosDoProduto.dataAtualizacao;
         
         
         this.produtoRepository.salvar(produtoEntity);

@@ -23,7 +23,7 @@ export class AtualizaProdutoDto {
 
     @IsPositive({ message: 'A quantidade deve ser um número maior que zero' })
     @IsOptional()
-    quantidadeDisponivel: number;
+    quantidade: number;
     
     @IsNotEmpty({ message: 'A descrição não pode ser vazia'})
     @MaxLength(1000, { message: 'Descrição deve ter no máximo 1000 caracteres'})

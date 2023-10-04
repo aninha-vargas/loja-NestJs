@@ -23,7 +23,7 @@ export class UsuarioController {
         usuarioEntity.nome = dadosDoUsuario.nome;
         usuarioEntity.id = uuid();
 
-        this.usuarioRepository.salvar(usuarioEntity);
+        this.usuarioService.criaUsuario(usuarioEntity);
 
         return {
             usuario: new ListaUsuarioDto(usuarioEntity.id, usuarioEntity.nome),

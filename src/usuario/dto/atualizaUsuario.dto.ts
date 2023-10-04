@@ -3,7 +3,8 @@ import { EmailUnico } from "../validacao/email-unico.validator";
 
 export class AtualizaUsuarioDto {
     
-    @IsUUID(undefined, { message: 'ID do produto inválido' })
+    @IsUUID(undefined, { message: 'ID do usuario inválido' })
+    @IsOptional()
     id: string;
     
     @IsNotEmpty({ message: 'O nome não pode ser vazio'})

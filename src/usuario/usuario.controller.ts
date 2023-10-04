@@ -40,7 +40,7 @@ export class UsuarioController {
 
     @Put('/:id')
     async atualizaUsuario(@Param('id') id: string, @Body() novosDados: AtualizaUsuarioDto ) {
-        const usuarioAtualizado = await this.usuarioRepository.atualiza(id, novosDados);
+        const usuarioAtualizado = await this.usuarioService.atualizaUsuario(id, novosDados);
 
         return {
             usuario: usuarioAtualizado,
@@ -50,7 +50,7 @@ export class UsuarioController {
 
     @Delete('/:id')
     async removeUsuario(@Param('id') id: string) {
-        const usuarioRemovido = await this.usuarioRepository.remove(id);
+        const usuarioRemovido = await this.usuarioService.deletaUsuario(id);
 
         return {
             usuario: usuarioRemovido,

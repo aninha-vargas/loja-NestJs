@@ -42,12 +42,13 @@ export class ProdutoController {
 
     @Get()
     async listaProdutos() {
-        return this.produtoRepository.listar();
+        // return this.produtoRepository.listar();
+        return this.produtoService.listaProdutos();
     }
 
     @Put('/:id')
     async atualizaProduto(@Param('id') id: string, @Body() novosDados: AtualizaProdutoDto ) {
-        const produtoAtualizado = await this.produtoRepository.atualiza(id, novosDados);
+        const produtoAtualizado = await this.produtoService.atualizaProduto(id, novosDados);
 
         return {
             produto: produtoAtualizado,
@@ -57,7 +58,7 @@ export class ProdutoController {
 
     @Delete('/:id')
     async removeProduto(@Param('id') id: string) {
-        const produtoRemovido = await this.produtoRepository.remove(id);
+        const produtoRemovido = await this.produtoService.deletaProduto(id);
 
         return {
             produto: produtoRemovido,

@@ -27,11 +27,8 @@ export class ProdutoController {
         produto.quantidade = dadosDoProduto.quantidade;
         produto.descricao = dadosDoProduto.descricao;
         produto.categoria = dadosDoProduto.categoria;
-        // produtoEntity.caracteristicas = dadosDoProduto.caracteristicas;
-        // produtoEntity.imagens = dadosDoProduto.imagens;
-        // produtoEntity.dataCriacao = dadosDoProduto.dataCriacao;
-        // produtoEntity.dataAtualizacao = dadosDoProduto.dataAtualizacao;
-        
+        produto.caracteristicas = dadosDoProduto.caracteristicas;
+        produto.imagens = dadosDoProduto.imagens;
         
         const produtoCadastrado = this.produtoService.criaProduto(produto);
         return {
